@@ -35,7 +35,7 @@ pipeline {
         stage('Docker Push') {
             steps {
                 withCredentials([string(credentialsId: 'docker-hub-pass', variable: 'DOCKER_PASSWORD')]) {
-                    sh 'echo $DOCKER_PASSWORD | docker login -u myusername --password-stdin'
+                    sh 'echo $DOCKER_PASSWORD | docker login -u mukeshma --password-stdin'
                     sh 'docker push mukeshma/myapp:latest'
                 }
             }

@@ -50,7 +50,7 @@ myapp/
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/myapp.git
+git clone https://github.com/mukesh-ma/web-app-CICD.git
 cd myapp
 
 # Create virtual environment and install dependencies

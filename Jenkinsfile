@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/mukesh-ma/web-app-CICD.git'
+                git branch: 'main', credentialsId: '2f583893-2906-46bd-9d4a-336c68137833', url: 'https://github.com/mukesh-ma/web-app-CICD.git''
             }
         }
 

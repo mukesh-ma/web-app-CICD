@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/yourusername/myapp.git'
+                git 'https://github.com/mukesh-ma/web-app-CICD.git'
             }
         }
 
@@ -28,7 +28,7 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                sh 'docker build -t myusername/myapp:latest .'
+                sh 'docker build -t mukeshma/myapp:latest .'
             }
         }
 
@@ -36,7 +36,7 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: 'docker-hub-pass', variable: 'DOCKER_PASSWORD')]) {
                     sh 'echo $DOCKER_PASSWORD | docker login -u myusername --password-stdin'
-                    sh 'docker push myusername/myapp:latest'
+                    sh 'docker push mukeshma/myapp:latest'
                 }
             }
         }
